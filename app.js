@@ -4,7 +4,7 @@ import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js
 // Usitumie sb_secret key au service_role key kwenye tovuti.
 const SUPABASE_URL = "https://clupzeidmquevmnplezc.supabase.co";
 const SUPABASE_PUBLISHABLE_KEY = "https://clupzeidmquevmnplezc.supabase.co";
-const configured = !SUPABASE_URL.startsWith("WEKA_") && !SUPABASE_PUBLISHABLE_KEY.startsWith("WEKA_");
+const configured = !SUPABASE_URL.startsWith("sb_publishable__WS_9cqNJ-Vn-qXYMNTe1A_QNVsINzV") && !SUPABASE_PUBLISHABLE_KEY.startsWith("sb_publishable__WS_9cqNJ-Vn-qXYMNTe1A_QNVsINzV");
 const supabase = configured ? createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY) : null;
 
 const $ = (id) => document.getElementById(id);
