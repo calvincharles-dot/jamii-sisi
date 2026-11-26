@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="sw">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="JAMII&SISI — Ubunifu, huduma na fursa kwa kila mtu.">
+  <title>JAMII&SISI | AI • DIGITAL • CREATIVITY</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">J&S</span><span>JAMII<span class="amp">&</span>SISI<small>AI • DIGITAL • CREATIVITY</small></span></a>
+    <nav><a href="#bidhaa">Bidhaa</a><a href="#huduma">Huduma</a><a href="#kuhusu">Kuhusu</a><button id="adminOpen" class="nav-button">Admin</button></nav>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">UBUNIFU • HUDUMA • FURSA</p>
+        <h1>Karibu <span>JAMII&SISI</span></h1>
+        <p class="lead">Mahali pa kupata bidhaa za kidijitali, huduma za ubunifu na suluhisho za kisasa.</p>
+        <a class="primary" href="#bidhaa">Angalia bidhaa</a>
+      </div>
+      <div class="hero-art"><div class="orb orb-one"></div><div class="orb orb-two"></div><div class="hero-card"><span>J&S</span><b>Ubunifu unaokupa nafasi.</b><small>AI • DIGITAL • CREATIVITY</small></div></div>
+    </section>
+    <section id="bidhaa" class="section">
+      <div class="section-head"><div><p class="eyebrow">DUKA LA KIDIJITALI</p><h2>Bidhaa zetu</h2><p class="muted">Chagua bidhaa za bure au za kulipia.</p></div></div>
+      <div id="productGrid" class="product-grid"><p class="muted">Inapakia bidhaa...</p></div>
+    </section>
+    <section id="huduma" class="section service-band">
+      <p class="eyebrow">TUNAKUSAIDIA</p><h2>Huduma za ubunifu na kidijitali</h2>
+      <div class="service-grid"><article><b>Poster & Graphic Design</b><p>Miundo ya matangazo, matukio na biashara.</p></article><article><b>Branding</b><p>Nembo na utambulisho wa biashara.</p></article><article><b>Digital Solutions</b><p>Hati, templates na suluhisho za kidijitali.</p></article></div>
+    </section>
+    <section id="kuhusu" class="section about"><p class="eyebrow">JAMII&SISI</p><h2>Ubunifu, huduma na fursa kwa kila mtu.</h2><p class="muted">Jukwaa la huduma na bidhaa za kidijitali.</p></section>
+  </main>
+  <footer>© <span id="year"></span> JAMII&SISI. Haki zote zimehifadhiwa.</footer>
+
+  <div id="adminModal" class="modal hidden">
+    <div class="modal-panel">
+      <button id="closeAdmin" class="close" aria-label="Funga">×</button>
+      <div id="loginView">
+        <p class="eyebrow">SEHEMU BINAFSI</p><h2>Admin Login</h2><p class="muted">Ingia kwa akaunti ya mmiliki.</p>
+        <form id="loginForm" class="stack"><label>Email<input id="email" type="email" required autocomplete="username"></label><label>Password<input id="password" type="password" required autocomplete="current-password"></label><button class="primary" type="submit">Ingia</button><p id="loginMessage" class="message"></p></form>
+      </div>
+      <div id="dashboardView" class="hidden">
+        <div class="dashboard-head"><div><p class="eyebrow">USIMAMIZI</p><h2>Admin Dashboard</h2></div><button id="logout" class="secondary">Toka</button></div>
+        <p class="muted">Ongeza bidhaa kwenye katalogi ya wateja.</p>
+        <form id="productForm" class="stack">
+          <label>Jina la bidhaa<input id="pname" required maxlength="120"></label>
+          <label>Aina<select id="ptype"><option value="free">Bure</option><option value="premium">Premium</option></select></label>
+          <label>Bei (TZS)<input id="price" type="number" min="0" step="1" value="0"></label>
+          <label>Kundi<input id="category" placeholder="Mfano: Templates, Poster"></label>
+          <label>Maelezo<textarea id="description" rows="3"></textarea></label>
+          <label>Kiungo cha picha (hiari)<input id="imageUrl" type="url" placeholder="https://..."></label>
+          <button class="primary" type="submit">Hifadhi bidhaa</button><p id="productMessage" class="message"></p>
+        </form>
+        <h3>Bidhaa zilizopo</h3><div id="adminProducts" class="admin-products"></div>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
