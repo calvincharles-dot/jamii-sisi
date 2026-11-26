@@ -1,8 +1,5 @@
 import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm";
-
-// Weka Project URL na Publishable Key za Supabase hapa.
-// Usitumie sb_secret key au service_role key kwenye tovuti.
-const SUPABASE_URL = "https://clupzeidmquevmnplezc.supabase.co";
+const SUPABASE_URL = sb_publishable__WS_9cqNJ-Vn-qXYMNTe1A_QNVsINzV
 const SUPABASE_PUBLISHABLE_KEY = "https://clupzeidmquevmnplezc.supabase.co";
 const configured = !SUPABASE_URL.startsWith("sb_publishable_") && !SUPABASE_PUBLISHABLE_KEY.startsWith("");
 const supabase = configured ? createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY) : null;
